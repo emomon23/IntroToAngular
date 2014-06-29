@@ -48,4 +48,8 @@ angular.module("SportzApp")
         $scope.cartTotal = function () {
             return cart.getCartPrice();
         }
+
+        $scope.addToCart = function (productToAdd) {
+            cart.addToCart(productToAdd.id, productToAdd.name, productToAdd.price);
+        }
     });
