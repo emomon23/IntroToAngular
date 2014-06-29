@@ -1,4 +1,15 @@
-﻿<div class="panel panel-default row">
+﻿  <div class="navbar-right">
+            <div class="navbar-text">
+                <b>Your cart</b>
+                {{ itemCount() }} item(s), 
+                {{ cartTotal() | currency }}
+            </div>
+
+            <a href="#/checkout" class="btn btn-default navbar-btn">Checkout</a>
+ </div>
+
+
+<div class="panel panel-default row">
     <div class="col-xs-3">
         <a ng-class="getCategoryClass('HOME')" ng-click="selectCategory('HOME')" class="btn btn-block btn-default btn-lg">Home</a>
         <a ng-repeat="prodCategory in data.products | orderBy:'category' | distinctCategories" ng-class="getCategoryClass(prodCategory)" ng-click="selectCategory(prodCategory)" class="btn btn-block btn-default btn-lg" >

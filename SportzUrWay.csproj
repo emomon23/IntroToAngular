@@ -78,11 +78,13 @@
     <Content Include="Css\site.css" />
     <Content Include="default.html" />
     <Content Include="Global.asax" />
+    <Content Include="HTML\CartSummary.html" />
     <Content Include="HTML\ListOfProducts.html" />
     <Content Include="Scripts\Angular\angular-resource.js" />
     <Content Include="Scripts\Angular\angular-route.js" />
     <Content Include="Scripts\Angular\angular.js" />
     <Content Include="Scripts\Custom\Controllers\MainController.js" />
+    <Content Include="Scripts\Custom\Controllers\SportzUrWayAppModuleConfig.js" />
     <Content Include="Scripts\Custom\Filters\DistinctCategories.js" />
     <Content Include="Scripts\Custom\Services\CartService.js" />
     <Content Include="Web.config" />

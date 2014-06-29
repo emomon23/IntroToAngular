@@ -1,12 +1,12 @@
-angular.module("AppNameHere")
+angular.module("SportzApp")
 .config(function ($routeProvider) {
     $routeProvider.when("/checkout",
         { templateUrl: "/html/CartSummary.html" });
 
     $routeProvider.when('/products',
-        { templateUrl: "/html/productsList.html" });
+        { templateUrl: "/html/ListOfProducts.html" });
 
     $routeProvider.otherwise({
-        templateUrl: '/html/productsList.html'
+        templateUrl: '/html/ListOfProducts.html'
     });
 });
