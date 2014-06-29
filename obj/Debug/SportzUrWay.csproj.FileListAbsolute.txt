@@ -1,0 +1,13 @@
+C:\Projects\AngularDemos\SportzUrWay\obj\Debug\SportzUrWay.csprojResolveAssemblyReference.cache
+C:\Projects\AngularDemos\SportzUrWay\bin\SportzUrWay.dll
+C:\Projects\AngularDemos\SportzUrWay\bin\SportzUrWay.pdb
+C:\Projects\AngularDemos\SportzUrWay\bin\Newtonsoft.Json.dll
+C:\Projects\AngularDemos\SportzUrWay\bin\System.Net.Http.Formatting.dll
+C:\Projects\AngularDemos\SportzUrWay\bin\System.Web.Http.dll
+C:\Projects\AngularDemos\SportzUrWay\bin\System.Web.Http.WebHost.dll
+C:\Projects\AngularDemos\SportzUrWay\bin\Newtonsoft.Json.xml
+C:\Projects\AngularDemos\SportzUrWay\bin\System.Net.Http.Formatting.xml
+C:\Projects\AngularDemos\SportzUrWay\bin\System.Web.Http.xml
+C:\Projects\AngularDemos\SportzUrWay\bin\System.Web.Http.WebHost.xml
+C:\Projects\AngularDemos\SportzUrWay\obj\Debug\SportzUrWay.dll
+C:\Projects\AngularDemos\SportzUrWay\obj\Debug\SportzUrWay.pdb
