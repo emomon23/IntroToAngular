@@ -54,4 +54,8 @@ angular.module("SportzApp")
         $scope.getCategoryClass = function(forCategory){
             return forCategory == currentlySelectedCategory? 'btn-primary' : '';
         }
+
+        $scope.productsInSelectedCategory = function (productInQuestion) {
+            return currentlySelectedCategory == 'HOME' || productInQuestion.category == currentlySelectedCategory;
+        }
     });

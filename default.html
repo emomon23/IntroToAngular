@@ -30,7 +30,7 @@
             </a>
         </div>
         <div class="col-xs-8">
-            <div class="well" ng-repeat="product in data.products">
+            <div class="well" ng-repeat="product in data.products | filter:productsInSelectedCategory">
                 <h3>
                     <strong>{{ product.name }}</strong>
                     <span class="pull-right label label-primary">
