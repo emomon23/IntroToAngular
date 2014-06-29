@@ -27,8 +27,8 @@ var dummyData = {
 
 
 
-angular.module("AppNameHere")
-   .controller("AppNameHereCTRL", function ($scope, $http) {
+angular.module("SportzApp")
+   .controller("SportzAppCTRL", function ($scope, $http) {
         $scope.data = dummyData
                 
         $scope.heartBeat = function () {
