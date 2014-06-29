@@ -11,7 +11,7 @@ angular.module("SportzApp")
            $scope.data = getProductsResponse;
        })
        .error(function (error) {
-           $scope.data.heartBeatResult = error.message;
+           $scope.data.heartBeatResult = error.status;
        });
                  
         $scope.heartBeat = function () {

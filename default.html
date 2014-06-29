@@ -19,32 +19,9 @@
 </head>
 <body ng-controller="SportzAppCTRL">
     <div class='navbar navbar-inverse'>
-	<a class='nav-brand' href='#'>SportzUrWay</a>
+	    <a class='nav-brand' href='#'>SportzUrWay</a>
     </div>
 
-    <div class="panel panel-default row">
-        <div class="col-xs-3">
-            <a ng-class="getCategoryClass('HOME')" ng-click="selectCategory('HOME')" class="btn btn-block btn-default btn-lg">Home</a>
-            <a ng-repeat="prodCategory in data.products | orderBy:'category' | distinctCategories" ng-class="getCategoryClass(prodCategory)" ng-click="selectCategory(prodCategory)" class="btn btn-block btn-default btn-lg" >
-                {{ prodCategory }}
-            </a>
-        </div>
-        <div class="col-xs-8">
-            <div class="well" ng-repeat="product in data.products | filter:productsInSelectedCategory">
-                <h3>
-                    <strong>{{ product.name }}</strong>
-                    <span class="pull-right label label-primary">
-                        {{product.price | currency }}
-                    </span>
-                </h3>
-                <span class="lead">{{ product.description }}</span>
-            </div>
-        </div>
-    </div>
-
-    <div>
-        <a class="btn btn-default" ng-click="heartBeat()">Hit Server Test</a>
-        <span>{{ data.heartBeatResult }} </span>
-    </div>
+   <ng-include src="'HTML/ListOfProducts.html'"></ng-include>
 </body>
 </html>

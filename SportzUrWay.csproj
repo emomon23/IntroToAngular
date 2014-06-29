@@ -78,6 +78,7 @@
     <Content Include="Css\site.css" />
     <Content Include="default.html" />
     <Content Include="Global.asax" />
+    <Content Include="HTML\ListOfProducts.html" />
     <Content Include="Scripts\Angular\angular-resource.js" />
     <Content Include="Scripts\Angular\angular-route.js" />
     <Content Include="Scripts\Angular\angular.js" />
@@ -110,7 +111,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="HTML\" />
     <Folder Include="Images\" />
     <Folder Include="Scripts\Custom\Directives\" />
     <Folder Include="Scripts\Custom\Services\" />
