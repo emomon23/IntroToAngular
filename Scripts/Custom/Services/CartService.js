@@ -1,4 +1,4 @@
-angular.module("cartModule", [])
+﻿angular.module("cartModule", [])
  .factory("cart", function () {
      var cartContents = [];
      var totalItemsInCart = 0;

@@ -12,14 +12,23 @@
 
     <script>
         //CREATE a new module called ''
-        angular.module("SportzApp", []);
+        angular.module("SportzApp", ['cartModule']);
     </script>
     <script src="scripts/Custom/Controllers/MainController.js"></script>
     <script src="Scripts/Custom/Filters/DistinctCategories.js"></script>
+    <script src="Scripts/Custom/Services/CartService.js"></script>
 </head>
 <body ng-controller="SportzAppCTRL">
     <div class='navbar navbar-inverse'>
 	    <a class='nav-brand' href='#'>SportzUrWay</a>
+
+        <div class="navbar-right">
+            <div class="navbar-text">
+                <b>Your cart</b>
+                {{ itemCount() }} item(s), 
+                {{ cartTotal() | currency }}
+            </div>
+        </div>
     </div>
 
    <ng-include src="'HTML/ListOfProducts.html'"></ng-include>

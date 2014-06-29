@@ -3,7 +3,7 @@
 
 angular.module("SportzApp")
    .constant('getProductListURL', 'api/products/getproducts')
-   .controller("SportzAppCTRL", function ($scope, $http, getProductListURL) {
+   .controller("SportzAppCTRL", function ($scope, $http, getProductListURL, cart) {
        var currentlySelectedCategory = 'HOME';
 
        $http.get(getProductListURL)
@@ -38,5 +38,14 @@ angular.module("SportzApp")
 
         $scope.productsInSelectedCategory = function (productInQuestion) {
             return currentlySelectedCategory == 'HOME' || productInQuestion.category == currentlySelectedCategory;
+        }
+
+       //Cart Interaction
+        $scope.itemCount = function () {
+            return cart.getCartItemsCount();
+        }
+
+        $scope.cartTotal = function () {
+            return cart.getCartPrice();
         }
     });

@@ -84,6 +84,7 @@
     <Content Include="Scripts\Angular\angular.js" />
     <Content Include="Scripts\Custom\Controllers\MainController.js" />
     <Content Include="Scripts\Custom\Filters\DistinctCategories.js" />
+    <Content Include="Scripts\Custom\Services\CartService.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -113,7 +114,6 @@
   <ItemGroup>
     <Folder Include="Images\" />
     <Folder Include="Scripts\Custom\Directives\" />
-    <Folder Include="Scripts\Custom\Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
