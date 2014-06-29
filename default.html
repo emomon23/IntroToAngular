@@ -24,8 +24,8 @@
 
     <div class="panel panel-default row">
         <div class="col-xs-3">
-            <a class="btn btn-block btn-default btn-lg">Home</a>
-            <a class="btn btn-block btn-default btn-lg" ng-repeat="prodCategory in data.products | distinctCategories">
+            <a ng-class="getCategoryClass('HOME')" ng-click="selectCategory('HOME')" class="btn btn-block btn-default btn-lg">Home</a>
+            <a ng-repeat="prodCategory in data.products | orderBy:'category' | distinctCategories" ng-class="getCategoryClass(prodCategory)" ng-click="selectCategory(prodCategory)" class="btn btn-block btn-default btn-lg" >
                 {{ prodCategory }}
             </a>
         </div>

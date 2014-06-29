@@ -29,6 +29,8 @@ var dummyData = {
 
 angular.module("SportzApp")
    .controller("SportzAppCTRL", function ($scope, $http) {
+       var currentlySelectedCategory = 'HOME';
+
         $scope.data = dummyData
                 
         $scope.heartBeat = function () {
@@ -43,5 +45,13 @@ angular.module("SportzApp")
            .error(function (error) {
                $scope.data.heartBeatResult = error;
            });
+        }
+
+        $scope.selectCategory = function (catSelected) {
+            currentlySelectedCategory = catSelected;
+        }
+
+        $scope.getCategoryClass = function(forCategory){
+            return forCategory == currentlySelectedCategory? 'btn-primary' : '';
         }
     });
