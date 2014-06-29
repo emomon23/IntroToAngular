@@ -12,4 +12,9 @@ ng-valid
     background-color: lightgreen;
 }
 
+.error
+{
+    color: red;
+}
+
 

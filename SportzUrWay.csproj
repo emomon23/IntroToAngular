@@ -80,9 +80,12 @@
     <Content Include="Global.asax" />
     <Content Include="HTML\CartSummary.html" />
     <Content Include="HTML\ListOfProducts.html" />
+    <Content Include="HTML\PlaceOrder.html" />
+    <Content Include="HTML\ThankYou.html" />
     <Content Include="Scripts\Angular\angular-resource.js" />
     <Content Include="Scripts\Angular\angular-route.js" />
     <Content Include="Scripts\Angular\angular.js" />
+    <Content Include="Scripts\Custom\Controllers\CheckOutController.js" />
     <Content Include="Scripts\Custom\Controllers\MainController.js" />
     <Content Include="Scripts\Custom\Controllers\SportzUrWayAppModuleConfig.js" />
     <Content Include="Scripts\Custom\Filters\DistinctCategories.js" />

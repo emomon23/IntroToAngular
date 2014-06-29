@@ -6,6 +6,12 @@ angular.module("SportzApp")
     $routeProvider.when('/products',
         { templateUrl: "/html/ListOfProducts.html" });
 
+    $routeProvider.when('/placeOrder',
+       { templateUrl: "/html/PlaceOrder.html" });
+
+    $routeProvider.when('/complete',
+      { templateUrl: "/html/thankyou.html" });
+
     $routeProvider.otherwise({
         templateUrl: '/html/ListOfProducts.html'
     });

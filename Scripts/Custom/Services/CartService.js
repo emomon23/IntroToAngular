@@ -17,7 +17,7 @@
                      return;
                  }
              }
-
+                       
              cartContents.push({ count: 1, productId: id, price: price, name: name });
          },
 

@@ -1,4 +1,5 @@
-angular.module("APP NAME HERE")
+angular.module("SportzApp")
+.constant('saveOrderURL', 'api/Products/SaveOrder')
 .controller("checkoutCTRL", function ($scope, $location, $http, cart, saveOrderURL) {
     $scope.cartData = cart.getProducts();
 
