@@ -1,32 +1,21 @@
 angular.module("SportzApp")
-.constant('saveOrderURL', 'api/Products/SaveOrder')
-.controller("checkoutCTRL", function ($scope, $location, $http, cart, saveOrderURL) {
-    $scope.cartData = cart.getProducts();
+.controller("checkoutCTRL", function ($scope, localServer) {
+    $scope.cartData = localServer.shoppingCart.getProducts();
 
-    $scope.total = cart.getCartPrice();
+    $scope.total = localServer.shoppingCart.getCartPrice();
     
-    $scope.itemsCount = cart.getCartItemsCount();
+    $scope.itemsCount = localServer.shoppingCart.getCartItemsCount();
     
     $scope.remove = function (id) {
-        cart.removeFromCart(id);
+        localServer.shoppingCart.removeFromCart(id);
     }
 
     $scope.sendOrder = function () {
         var order = angular.copy($scope.data.shipping);
-        order.products = cart.getProducts();
-
-        $http.post(saveOrderURL, order)
-           .success(function (confCode) {
-               $scope.data.saveOrderMessage = confCode;
-               cart.emptyCart();
-
-           })
-           .error(function (error) {
-               $scope.data.saveOrderMessage = error.message;
-           })
-           .finally(function () {
-               $location.path('/complete');
-           });
+    
+        localServer.saveOrder(order, function (confCode) {
+            $scope.data.saveOrderMessage = confCode;
+        });
     }
     
 

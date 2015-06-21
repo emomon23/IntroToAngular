@@ -2,31 +2,12 @@
 
 
 angular.module("SportzApp")
-   .constant('getProductListURL', 'api/products/getproducts')
-   .controller("SportzAppCTRL", function ($scope, $http, getProductListURL, cart) {
-       var currentlySelectedCategory = 'HOME';
+   .controller("SportzAppCTRL", function ($scope, localServer) {
+        var currentlySelectedCategory = 'HOME';
 
-       $http.get(getProductListURL)
-       .success(function (getProductsResponse) {
-           $scope.data = getProductsResponse;
-       })
-       .error(function (error) {
-           $scope.data.heartBeatResult = error.status;
-       });
-                 
-        $scope.heartBeat = function () {
-            var url = 'api/SysAdmin/PingService';
-            
-            $scope.data.heartBeatResult = '';
-
-            $http.get(url)
-           .success(function (data) {
-               $scope.data.heartBeatResult = data;
-           })
-           .error(function (error) {
-               $scope.data.heartBeatResult = error;
-           });
-        }
+        localServer.getProductList(function (productList) {
+            $scope.data = productList;
+        });
 
         $scope.selectCategory = function (catSelected) {
             currentlySelectedCategory = catSelected;
@@ -42,14 +23,14 @@ angular.module("SportzApp")
 
        //Cart Interaction
         $scope.itemCount = function () {
-            return cart.getCartItemsCount();
+            return localServer.shoppingCart.getCartItemsCount();
         }
 
         $scope.cartTotal = function () {
-            return cart.getCartPrice();
+            return localServer.shoppingCart.getCartPrice();
         }
 
         $scope.addToCart = function (productToAdd) {
-           cart.addToCart(productToAdd.productId, productToAdd.name, productToAdd.price);
+            localServer.shoppingCart.addToCart(productToAdd.productId, productToAdd.name, productToAdd.price);
         }
     });

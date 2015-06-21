@@ -25,7 +25,7 @@ namespace SportzUrWay.Controllers
         public string SaveOrder(Order order)
         {
             //Save the order
-            return string.Format("You're order has been placed.  Confirmation Code: {0}", Guid.NewGuid().ToString().Substring(0, 5));
+            return string.Format("Thank you {1}. You're order has been placed.  Confirmation Code: {0}", Guid.NewGuid().ToString().Substring(0, 5), order.Name);
         }
     }
 }
