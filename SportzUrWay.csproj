@@ -89,6 +89,8 @@
     <Content Include="Scripts\Custom\Controllers\MainController.js" />
     <Content Include="Scripts\Custom\Controllers\SportzUrWayAppModuleConfig.js" />
     <Content Include="Scripts\Custom\Filters\DistinctCategories.js" />
+    <Content Include="Scripts\Custom\POJOs\OrderFacade.js" />
+    <Content Include="Scripts\Custom\POJOs\ProductFacade.js" />
     <Content Include="Scripts\Custom\POJOs\ShippingCart.js" />
     <Content Include="Scripts\Custom\Services\LocalServer.js" />
     <Content Include="Web.config" />

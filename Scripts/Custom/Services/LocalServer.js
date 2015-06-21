@@ -3,42 +3,13 @@
   .constant('saveOrderURL', 'api/Products/SaveOrder')
   .factory('localServer', function ($http, $location, getProductListURL, saveOrderURL) {
 
-      var products = null;
-      var cart = new shoppingCart();
+      var cartInst = new shoppingCart();
+      var productFacdeInst = new productFacadeFnc($http, getProductListURL);
+      var orderFacadeInst = new orderFacadeFnc($http, $location, saveOrderURL, cartInst);
 
       return {
-          shoppingCart: cart,
-
-          getProductList: function (callBack) {
-              if (products == null) {
-                  $http.get(getProductListURL)
-                       .success(function (getProductsResponse) {
-                           products = getProductsResponse;
-                           callBack(products)
-                       })
-                       .error(function (error) {
-                           //Dosomething = error.status;
-                       });
-              }
-              else {
-                  callBack(products);
-              }
-          },
-
-          saveOrder: function (shippingInformation, callBack) {
-              shippingInformation.products = cart.getProducts();
-
-              $http.post(saveOrderURL, shippingInformation)
-                 .success(function (confCode) {
-                     cart.emptyCart();
-                     callBack(confCode);
-                 })
-                 .error(function (error) {
-                     callBack(error.message)
-                 })
-                 .finally(function () {
-                     $location.path('/complete');
-                 });
-          }
+          shoppingCart: cartInst,
+          productFacade: productFacdeInst,
+          orderFacade: orderFacadeInst
       }
   });

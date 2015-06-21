@@ -5,7 +5,7 @@ angular.module("SportzApp")
    .controller("SportzAppCTRL", function ($scope, localServer) {
         var currentlySelectedCategory = 'HOME';
 
-        localServer.getProductList(function (productList) {
+        localServer.productFacade.getProductList(function (productList) {
             $scope.data = productList;
         });
 

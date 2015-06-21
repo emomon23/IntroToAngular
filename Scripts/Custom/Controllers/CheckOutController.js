@@ -13,7 +13,7 @@ angular.module("SportzApp")
     $scope.sendOrder = function () {
         var order = angular.copy($scope.data.shipping);
     
-        localServer.saveOrder(order, function (confCode) {
+        localServer.orderFacade.saveOrder(order, function (confCode) {
             $scope.data.saveOrderMessage = confCode;
         });
     }
