@@ -88,6 +88,8 @@
     <Content Include="Scripts\Custom\Controllers\CheckOutController.js" />
     <Content Include="Scripts\Custom\Controllers\MainController.js" />
     <Content Include="Scripts\Custom\Controllers\SportzUrWayAppModuleConfig.js" />
+    <Content Include="Scripts\Custom\Directives\RelatedItemsPopover.js" />
+    <Content Include="Scripts\Custom\Directives\RelatedItemsPopover.tpl.html" />
     <Content Include="Scripts\Custom\Filters\DistinctCategories.js" />
     <Content Include="Scripts\Custom\POJOs\OrderFacade.js" />
     <Content Include="Scripts\Custom\POJOs\ProductFacade.js" />
