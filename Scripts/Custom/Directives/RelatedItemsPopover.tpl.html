@@ -1,0 +1,10 @@
+﻿<a href ng-click="togglePopover()">Click to view similar</a>
+<div ng-style="{display: showPopover ? 'block' : 'none', 'top': top + 'px', 'left': left + 'px'}" class="popover fade right in" role="tooltip">
+    <div class="arrow" style="top: 50%;"></div>
+    <h3 class="popover-title">Similar to {{item.name}}</h3>
+    <div class="popover-content">
+        <div ng-repeat="product in similarProducts">
+            {{product.name}}
+        </div>
+    </div>
+</div>
