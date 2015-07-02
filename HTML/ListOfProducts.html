@@ -23,6 +23,7 @@
                 <span class="pull-right label label-primary">
                     {{product.price | currency }}
                 </span>
+                <a href ng-click="selectCategory(product.category)">View {{getNumberOfProductsInCategory(product.category)}} similar products</a>
             </h3>
 
             <button ng-click="addToCart(product)" class="btn btn-success pull-right">

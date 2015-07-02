@@ -1,4 +1,4 @@
-﻿<a href ng-click="togglePopover()">Click to view similar</a>
+﻿<a href ng-click="togglePopover($event)">Click to view similar</a>
 <div ng-style="{display: showPopover ? 'block' : 'none', 'top': top + 'px', 'left': left + 'px'}" class="popover fade right in" role="tooltip">
     <div class="arrow" style="top: 50%;"></div>
     <h3 class="popover-title">Similar to {{item.name}}</h3>
